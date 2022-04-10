@@ -13,14 +13,14 @@ public class StringUtilsTest {
 
     @Test
     public void testToDouble() {
-        assertEquals(3.1415, StringUtils.toDouble("3.1415"), 0.0001);
-        assertEquals(Double.NaN, StringUtils.toDouble(null), 0.00001);
+        assertEquals(3.14, StringUtils.toDouble("3.14"), 0.01);
+        assertEquals(Double.NaN, StringUtils.toDouble(null), 0.01);
     }
 
     @Test
     public void testFromDouble() {
-        double source = 3.1415;
-        String expected="3.1415";
+        double source = 3.14;
+        String expected="3.14";
         String actual = StringUtils.fromDouble(source);
         assertEquals(expected, actual);
     }
